@@ -18,3 +18,8 @@ class StudentImportAPIView(APIView):
             {"message": "Students imported successfully."},
             status=status.HTTP_201_CREATED
         )
+    
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Student Management System is running successfully on Render!")
