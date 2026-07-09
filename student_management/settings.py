@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,13 +20,26 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-sgsi#81$(x#yzl(4=s$zq*03(vek#rq=8x-*-fass4%4*5($xj"
+# SECRET_KEY = "django-insecure-sgsi#81$(x#yzl(4=s$zq*03(vek#rq=8x-*-fass4%4*5($xj"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+# New code for Webservice deployement
 
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY",
+    "django-insecure-sgsi#81$(x#yzl(4=s$zq*03(vek#rq=8x-*-fass4%4*5($xj"
+)
+
+DEBUG = os.environ.get("DEBUG", "False") == "True"
+
+ALLOWED_HOSTS = [
+    ".onrender.com",
+    "127.0.0.1",
+    "localhost",
+]
 
 # Application definition
 
