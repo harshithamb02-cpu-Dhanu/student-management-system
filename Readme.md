@@ -462,5 +462,17 @@ GitHub: https://github.com/harshithamb02-cpu-Dhanu
 
 LinkedIn: https://www.linkedin.com/in/harshitha-m-b-a642763b6/
 
----
 
+Docker Deployemet 
+
+git clone https://github.com/harshithamb02-cpu-Dhanu/student-management-system.git
+cd student-management-system
+
+docker compose build
+docker compose up -d
+
+docker compose exec web python manage.py migrate
+docker compose exec web python manage.py createsuperuser
+
+user name :admin
+password : admin@123
