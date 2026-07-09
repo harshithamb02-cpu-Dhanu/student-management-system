@@ -458,9 +458,9 @@ Authorization: Bearer <access_token>
 
 Python Backend Developer
 
-GitHub: https://github.com/your-username
+GitHub: https://github.com/harshithamb02-cpu-Dhanu
 
-LinkedIn: https://linkedin.com/in/your-profile
+LinkedIn: https://www.linkedin.com/in/harshitha-m-b-a642763b6/
 
 ---
 
