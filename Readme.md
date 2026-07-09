@@ -476,3 +476,8 @@ docker compose exec web python manage.py createsuperuser
 
 user name :admin
 password : admin@123
+
+After runing the port this are the screnshots
+
+![alt text](image.png)
+![alt text](image-1.png)
